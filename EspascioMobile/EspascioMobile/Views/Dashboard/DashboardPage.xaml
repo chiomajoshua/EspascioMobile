@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Shell.NavBarIsVisible="False"
+             x:Class="EspascioMobile.Views.Dashboard.DashboardPage">
+    <FlexLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <ScrollView BackgroundColor="White" Orientation="Vertical" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Grid VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Frame BackgroundColor="White" HeightRequest="220" VerticalOptions="StartAndExpand">
+                    <StackLayout Spacing="20">
+                        <StackLayout Margin="50,80,0,0">
+                            <Label Text="Hi Ugo," FontSize="25" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                            <Label Text="How about we make today very productive!!" FontSize="12" FontAttributes="None" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                        </StackLayout>
+                        <SearchBar x:Name="searchBar" FontSize="14" HorizontalOptions="CenterAndExpand" Placeholder="Search your tasks"/>
+                    </StackLayout>
+                </Frame>
+                <ImageButton BackgroundColor="White" Source="menu.png" WidthRequest="40" HeightRequest="40" Margin="20,10" HorizontalOptions="Start" VerticalOptions="Start" Clicked="ImageButton_Clicked" />
+
+                <StackLayout Margin="20,20,0,0" Spacing="15" Grid.Row="1">
+                    <Label Text="Priorities" FontSize="18" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10" Orientation="Horizontal">
+                        <Frame BackgroundColor="White" HeightRequest="80" WidthRequest="75" VerticalOptions="StartAndExpand" BorderColor="#F5B735">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="design.png" HeightRequest="20" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Design" FontSize="13" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="3 Tasks" FontSize="9" FontAttributes="None" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <Frame BackgroundColor="White" HeightRequest="80" WidthRequest="75" VerticalOptions="StartAndExpand" BorderColor="#FF4568">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="surveying.png" HeightRequest="20" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Surveying" FontSize="13" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="10 Tasks" FontSize="9" FontAttributes="None" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+
+                        <Frame BackgroundColor="White" HeightRequest="80" WidthRequest="75" VerticalOptions="StartAndExpand" BorderColor="#6B3CDC">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="article.png" HeightRequest="20" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+                                <StackLayout Grid.Row="1">
+                                    <Label Text="Briefs" FontSize="13" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                                    <Label Text="12 Tasks" FontSize="9" FontAttributes="None" TextColor="Gray" HorizontalOptions="StartAndExpand"/>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout Margin="20,20,20,0" Spacing="15" Grid.Row="2">
+                    <Label Text="Teams" FontSize="18" FontAttributes="Bold" TextColor="Black" HorizontalOptions="StartAndExpand"/>
+                    <StackLayout HorizontalOptions="CenterAndExpand" Spacing="10" Orientation="Vertical">
+                        <Frame HeightRequest="80" WidthRequest="320" BackgroundColor="#6B3CDC">
+                            <Label Text="Battle of Pencils" FontSize="13" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+
+                        <Frame HeightRequest="80" WidthRequest="320" BackgroundColor="#F5B735">
+                            <Label Text="Architects" FontSize="13" FontAttributes="Bold" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                        </Frame>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </FlexLayout>
+</ContentPage>

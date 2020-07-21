@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:EspascioMobile.Views.Dashboard"
+             xmlns:viewsTasks="clr-namespace:EspascioMobile.Views.Tasks"
+            xmlns:viewsProfiles="clr-namespace:EspascioMobile.Views.Security"
+             mc:Ignorable="d"
+             x:Class="EspascioMobile.AppShell">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ThemeColor">#A72715</Color>
+            <Color x:Key="GrayColor">Gray</Color>
+            <Color x:Key="BgColor">#F0F0F0</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource BgColor}"/>
+                <Setter Property="Shell.TabBarForegroundColor" Value="{StaticResource ThemeColor}"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource GrayColor}"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource ThemeColor}"/>
+            </Style>
+
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}"/>
+        </ResourceDictionary>
+    </Shell.Resources>
+    
+    <FlyoutItem Title="Home">
+        <Tab Title="Dashboard" Icon="dashboard.png">
+            <ShellContent ContentTemplate="{DataTemplate views:DashboardPage}"/>
+        </Tab>
+        <Tab Title="Tasks" Icon="briefcase.png">
+            <ShellContent ContentTemplate="{DataTemplate viewsTasks:MyTasksPage}"/>
+        </Tab>
+        <Tab Title="Chats" Icon="meeting.png">
+            <ShellContent ContentTemplate="{DataTemplate viewsTasks:Meetings}"/>
+        </Tab>
+        <Tab Title="Profile" Icon="profile.png">
+            <ShellContent ContentTemplate="{DataTemplate viewsProfiles:MyProfilePage}"/>
+        </Tab>
+    </FlyoutItem>
+</Shell>
