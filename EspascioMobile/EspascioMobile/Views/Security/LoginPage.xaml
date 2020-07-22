@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:EspascioMobile.ViewModels.Security"
+             mc:Ignorable="d"
+             x:Class="EspascioMobile.Views.Security.LoginPage">
+    <ContentPage.BindingContext>
+        <vm:LoginViewModel x:Name="myLoginVM"/>
+    </ContentPage.BindingContext>
+    <Grid BackgroundColor="White" Margin="15,0,15,0">
+        <Image Source="EspacioLogo.png" HeightRequest="75" WidthRequest="75" HorizontalOptions="EndAndExpand" VerticalOptions="Start" />
+        <Grid HeightRequest="520" Margin="30">
+            <Path Fill="#F6F8F8" Aspect="Uniform" HorizontalOptions="Center"
+                  Data="M30.6,172.838V696.314L348.157,426.72Z" Opacity="0.5"/>
+            <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Margin="50,0">
+                <Label Text="LOG IN" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <StackLayout Spacing="10">
+                    <Grid WidthRequest="160" Padding="10,0" BackgroundColor="#F6F6F6" HorizontalOptions="Start">
+                        <Entry Keyboard="Email" Placeholder="Username" FontSize="12"/>
+                    </Grid>
+                    <Grid WidthRequest="160" Padding="10,0" BackgroundColor="#F6F6F6" HorizontalOptions="Start">
+                        <Entry IsPassword="True" Placeholder="Password" FontSize="12"/>
+                    </Grid>
+                </StackLayout>
+                <Button TextColor="White" CornerRadius="5" BackgroundColor="#A72715" Text="Log In" HorizontalOptions="Start" Clicked="Login" />
+            </StackLayout>            
+        </Grid>
+    </Grid>
+</ContentPage>

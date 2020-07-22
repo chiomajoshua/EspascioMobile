@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EspascioMobile.Views.Dashboard;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,12 @@ namespace EspascioMobile
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            //
+
+            //MainPage = new AppShell();
+            Device.SetFlags(new[] { "Shapes_Experimental", "MediaElement_Experimental" });
+            var splashPage = new NavigationPage(new SplashPage());
+            MainPage = splashPage;
             MainPage.SetValue(NavigationPage.BarBackgroundColorProperty, Color.White);
 
             //Title color

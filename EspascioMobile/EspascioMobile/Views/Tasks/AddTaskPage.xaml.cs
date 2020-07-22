@@ -1,5 +1,4 @@
-﻿using EspascioMobile.Views.Tasks;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,19 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace EspascioMobile
+namespace EspascioMobile.Views.Tasks
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AppShell : Shell
+    public partial class AddTaskPage : ContentPage
     {
-        public AppShell()
+        public AddTaskPage()
         {
             InitializeComponent();
-        }
-
-        void RegisterRoutes()
-        {
-            Routing.RegisterRoute("Tasks/AddTask", typeof(AddTaskPage));
         }
     }
 }
